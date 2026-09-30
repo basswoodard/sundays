@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cream: #fbf3e6;
+  --color-card: #fffdf6;
+  --color-rust: #c1552e;
+  --color-rust-dark: #9c4222;
+  --color-sage: #707b4e;
+  --color-sage-light: #eaf0e1;
+  --color-ink: #2e2620;
+  --color-muted: #5b5347;
+  --color-border: #ede1cb;
+  --color-border-soft: #e3d5be;
+  --color-amber: #f1d2c4;
+
+  --font-fraunces: "Fraunces", serif;
+  --font-nunito: "Nunito Sans", sans-serif;
+  --font-caveat: "Caveat", cursive;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: var(--color-cream);
+  --color-card: var(--color-card);
+  --color-rust: var(--color-rust);
+  --color-rust-dark: var(--color-rust-dark);
+  --color-sage: var(--color-sage);
+  --color-sage-light: var(--color-sage-light);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-border-soft: var(--color-border-soft);
+  --color-amber: var(--color-amber);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-nunito);
+  --font-hand: var(--font-caveat);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+}
+
+.card {
+  background: var(--color-card);
+  border: 2px solid var(--color-border);
+  border-radius: 22px 26px 20px 28px;
+}
+
+.chip {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 2px solid var(--color-border-soft);
+  background: var(--color-card);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.chip.active {
+  border-color: var(--color-rust);
+  background: var(--color-rust);
+  color: var(--color-card);
+}
+
+.chip.active-none {
+  border-color: var(--color-sage);
+  background: var(--color-sage);
+  color: var(--color-card);
 }
