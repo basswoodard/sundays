@@ -6,7 +6,7 @@ export async function Nav() {
   const user = await getCurrentUser();
 
   return (
-    <div className="max-w-[1120px] mx-auto px-6 pt-7 flex items-center justify-between">
+    <div className="w-full max-w-[1120px] mx-auto px-6 pt-7 flex items-center justify-between">
       <Link href={user ? "/suppers" : "/"} className="font-hand text-4xl font-bold text-rust">
         sundays
       </Link>

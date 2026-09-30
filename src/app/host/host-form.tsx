@@ -78,7 +78,7 @@ export function HostForm({ existingSupper }: { existingSupper: ExistingSupper | 
 
   if (step === 5) {
     return (
-      <div className="max-w-xl mx-auto px-5 py-14 text-center">
+      <div className="w-full max-w-xl mx-auto px-5 py-14 text-center">
         <div className="text-6xl mb-3">🎉</div>
         <h1 className="text-4xl">{justEdited ? "Your table is updated!" : "Your table is open!"}</h1>
         <p className="text-muted font-bold mt-3">
@@ -117,10 +117,10 @@ export function HostForm({ existingSupper }: { existingSupper: ExistingSupper | 
   }
 
   return (
-    <div className="max-w-xl mx-auto px-5 pt-5 pb-24">
+    <div className="w-full max-w-xl mx-auto px-5 pt-5 pb-24">
       <h1 className="text-center text-4xl mb-1.5">{hasPublished ? "Edit your table" : "Host a Supper"}</h1>
       <p className="text-center text-muted font-bold mb-7">
-        {hasPublished ? "Make changes below, then save to update your table." : "I&apos;m cooking Sunday. Come meet me at the table."}
+        {hasPublished ? "Make changes below, then save to update your table." : "I'm cooking Sunday. Come meet me at the table."}
       </p>
 
       <div className="flex gap-2 mb-7">
